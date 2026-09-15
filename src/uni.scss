@@ -1,0 +1,108 @@
+/**
+ * uni-app 全局样式变量。
+ * 这个文件会被自动注入到每个 scss 块里，业务代码可以直接使用下面的变量，不需要 import。
+ * 官方插件与插件市场的组件也依赖 $uni-* 变量，不要删除。
+ */
+
+/* ============ uni-app 内置变量（插件依赖，勿删） ============ */
+$uni-color-primary: #007aff;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+$uni-text-color: #333;
+$uni-text-color-inverse: #fff;
+$uni-text-color-grey: #999;
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable: #c0c0c0;
+
+$uni-bg-color: #fff;
+$uni-bg-color-grey: #f8f8f8;
+$uni-bg-color-hover: #f1f1f1;
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4);
+
+$uni-border-color: #c8c7cc;
+
+$uni-font-size-sm: 24rpx;
+$uni-font-size-base: 28rpx;
+$uni-font-size-lg: 32rpx;
+
+$uni-img-size-sm: 40rpx;
+$uni-img-size-base: 52rpx;
+$uni-img-size-lg: 80rpx;
+
+$uni-border-radius-sm: 4rpx;
+$uni-border-radius-base: 6rpx;
+$uni-border-radius-lg: 12rpx;
+$uni-border-radius-circle: 50%;
+
+$uni-spacing-row-sm: 10rpx;
+$uni-spacing-row-base: 20rpx;
+$uni-spacing-row-lg: 30rpx;
+
+$uni-spacing-col-sm: 8rpx;
+$uni-spacing-col-base: 16rpx;
+
+$uni-opacity-disabled: 0.3;
+
+/* ============ Life-Moments 项目变量 ============ */
+/* 品牌色：温暖的日落橘，用于强调、按钮、选中态 */
+$lm-color-brand: #f2734a;
+$lm-color-brand-light: #ffd9c9;
+$lm-color-accent: #4a7cf2;
+
+$lm-text-primary: #1f1f1f;
+$lm-text-regular: #4a4a4a;
+$lm-text-secondary: #8a8a8a;
+$lm-text-inverse: #ffffff;
+
+$lm-bg-page: #f7f7f7;
+$lm-bg-card: #ffffff;
+$lm-bg-mask: rgba(0, 0, 0, 0.45);
+
+$lm-border-color: #ececec;
+$lm-shadow-card: 0 8rpx 24rpx rgba(31, 31, 31, 0.06);
+
+$lm-radius-sm: 8rpx;
+$lm-radius-md: 16rpx;
+$lm-radius-lg: 24rpx;
+
+$lm-space-xs: 8rpx;
+$lm-space-sm: 16rpx;
+$lm-space-md: 24rpx;
+$lm-space-lg: 32rpx;
+$lm-space-xl: 48rpx;
+
+$lm-font-xs: 22rpx;
+$lm-font-sm: 24rpx;
+$lm-font-md: 28rpx;
+$lm-font-lg: 32rpx;
+$lm-font-xl: 40rpx;
+
+/* ============ 公共 mixin ============ */
+/* uni.scss 会被自动注入到每个 scss 块，mixin 必须定义在这里，组件里才能直接 @include */
+
+@mixin card {
+  background-color: $lm-bg-card;
+  border-radius: $lm-radius-md;
+  box-shadow: $lm-shadow-card;
+}
+
+@mixin ellipsis($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if $line == 1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+/** 安全区适配：底部刘海屏留白 */
+@mixin safe-area-bottom($extra: 0rpx) {
+  padding-bottom: calc(#{$extra} + constant(safe-area-inset-bottom));
+  padding-bottom: calc(#{$extra} + env(safe-area-inset-bottom));
+}

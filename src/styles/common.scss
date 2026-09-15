@@ -1,0 +1,47 @@
+page,
+.page {
+  background-color: $lm-bg-page;
+  color: $lm-text-primary;
+  font-size: $lm-font-md;
+  line-height: 1.6;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding: $lm-space-md;
+  box-sizing: border-box;
+}
+
+.card {
+  @include card;
+
+  padding: $lm-space-md;
+}
+
+.text-secondary {
+  color: $lm-text-secondary;
+  font-size: $lm-font-sm;
+}
+
+.text-title {
+  color: $lm-text-primary;
+  font-size: $lm-font-lg;
+  font-weight: 600;
+}
+
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  background-color: $lm-color-brand;
+  color: $lm-text-inverse;
+  border-radius: $lm-radius-lg;
+  font-size: $lm-font-md;
+
+  &::after {
+    border: none;
+  }
+}

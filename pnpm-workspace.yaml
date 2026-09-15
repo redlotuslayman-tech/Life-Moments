@@ -1,0 +1,9 @@
+# pnpm 11 的依赖设置放在这里。
+# 下面这些包需要执行安装脚本：esbuild 装平台二进制、vue-demi 切换 Vue 版本、
+# core-js 输出环境信息、@parcel/watcher 编译本地 watcher。
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: true
+  core-js-pure: true
+  esbuild: true
+  vue-demi: true

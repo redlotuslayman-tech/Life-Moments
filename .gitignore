@@ -1,0 +1,33 @@
+# 依赖
+node_modules
+.pnpm-store
+
+# 构建产物
+dist
+unpackage
+*.local
+
+# 日志
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# 编辑器 / 系统文件
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.DS_Store
+Thumbs.db
+*.suo
+*.sw?
+
+# 本地环境变量（含密钥，不要提交）
+.env.local
+.env.*.local
+
+# HBuilderX / 微信开发者工具本地文件
+.hbuilderx
+project.private.config.json

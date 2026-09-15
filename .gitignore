@@ -25,6 +25,7 @@ Thumbs.db
 *.sw?
 
 # 本地环境变量（含密钥，不要提交）
+.env
 .env.local
 .env.*.local
 
